@@ -12,8 +12,9 @@ const App = () => (
     <Header />
     <Switch>
       <Route exact path="/" component={HomePage} />
+      <Route path="/home" component={HomePage} />
       <Route path="/dashboard" component={Dashboard} />
-      <Route component={NotFoundPage} />
+      <Route path="*" component={NotFoundPage} />
     </Switch>
   </Fragment>
 )

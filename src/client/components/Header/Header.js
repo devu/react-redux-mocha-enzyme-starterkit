@@ -6,7 +6,7 @@ const activeStyle = { color: 'blue' }
 const Header = () => (
   <Fragment>
     <div className="header">
-      <NavLink exact to="/" activeStyle={activeStyle}>
+      <NavLink exact to="/home" activeStyle={activeStyle}>
         Home
       </NavLink>
       {' | '}

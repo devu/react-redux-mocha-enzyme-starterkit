@@ -5,7 +5,7 @@ import { __PROD__ } from '../globals'
 
 export default [
   {
-    test: /\.(gif|jpe?g|png|webp|ico)$/,
+    test: /\.(gif|jpe?g|png|webp|ico|svg)$/,
     include: SRC,
     use: [
       {
@@ -20,7 +20,7 @@ export default [
       },
     ],
   },
-
+  /*
   {
     test: /\.svg$/,
     include: SRC,
@@ -42,7 +42,7 @@ export default [
       },
     ],
   },
-
+  */
   {
     test: /\.(mp4|m4a|webm|ogv|oga|ogg|mp3|wav)$/,
     include: SRC,

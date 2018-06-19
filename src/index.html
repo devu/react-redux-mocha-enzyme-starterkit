@@ -3,45 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Sample App</title>
 </head>
 <body>
-  <!--[if lte IE 10]>
-    <style>
-      .message {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        font-family: sans-serif;
-        text-align: center;
-        color: white;
-        background-color: #17a7e0;
-        z-index: 999;
-      }
-
-      .message p {
-        width: 80%;
-        font-size: 2em;
-        line-height: 1.5;
-        margin: 0 auto;
-        position: absolute;
-        top: 33%;
-        left: 50%;
-        margin-left: -40%;
-      }
-
-      strong { font-weight: 500; }
-
-      a { text-decoration: underline; }
-    </style>
-    <div class="message">
-      <p>You are using an <strong>outdated</strong> browser. Please upgrade your browser to a modern browser to improve your experience. You can do that by clicking
-        <a href="http://browsehappy.com/"> here</a> and choosing one of multiple browser options.
-      </p>
-    </div>
-  <![endif]-->
   <div id="react-root"></div>
+  <!-- Icons -->
+  <script>
+    if (document.body.children[0].nodeName !== 'svg') {
+      var pe_ajax = new XMLHttpRequest();
+      pe_ajax.open("GET", "https://unpkg.com/@pearson-components/elements-sdk/build/icons/p-icons-sprite-1.1.svg", true);
+      pe_ajax.responseType = "document";
+      pe_ajax.onload = function(e) {
+        document.body.insertBefore(
+          pe_ajax.responseXML.documentElement,
+          document.body.childNodes[0]
+        );
+      }
+      pe_ajax.send();
+    }
+  </script>
 </body>
 </html>

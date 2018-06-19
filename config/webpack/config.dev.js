@@ -1,10 +1,9 @@
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-import SpriteLoaderPlugin from 'svg-sprite-loader/plugin'
+// import SpriteLoaderPlugin from 'svg-sprite-loader/plugin'
 
 import { DIST, SRC } from './paths'
 import rules from './rules'
-
 
 export default {
   mode: 'development',
@@ -47,13 +46,13 @@ export default {
       template: `${SRC}/index.html`,
       favicon: 'favicon.ico',
     }),
-    new SpriteLoaderPlugin(),
+    // new SpriteLoaderPlugin(),
   ],
 
   devtool: 'eval-source-map',
   target: 'web',
 
   performance: {
-    hints: false,
+    hints: false
   },
 }

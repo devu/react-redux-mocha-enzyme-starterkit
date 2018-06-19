@@ -12,7 +12,7 @@ const rules = [
           babelrc: false,
           plugins: ['react-hot-loader/babel'],
           presets: [
-            ['latest', { es2015: { modules: false } }],
+            ['env', { es2015: { modules: false } }],
             'stage-3',
             'react',
           ],

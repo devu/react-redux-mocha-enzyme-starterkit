@@ -1,21 +1,34 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import { Route } from 'react-router-dom'
 
-const HomePage = () => (
+import Main from './Main'
+import Buttons from './Buttons'
+import Icons from './Icons'
+import Selectors from './Selectors'
+import TextInputs from './TextInputs'
+import Grids from './Grids'
+import Tables from './Tables'
+
+const HomePage = ({ match }) => (
   <div>
-    <h1>Home Page</h1>
-
-    <h2>Get Started</h2>
-    <ol>
-      <li>
-          go to{' '}
-        <Link href="/demo" to="/demo">
-            demo app
-        </Link>
-      </li>
-      <li>Remove the demo</li>
-    </ol>
+    <Route path={match.path} component={Main} />
+    <Route path={`${match.path}/buttons`} component={Buttons} />
+    <Route path={`${match.path}/icons`} component={Icons} />
+    <Route path={`${match.path}/selectors`} component={Selectors} />
+    <Route path={`${match.path}/inputs`} component={TextInputs} />
+    <Route path={`${match.path}/grids`} component={Grids} />
+    <Route path={`${match.path}/tables`} component={Tables} />
   </div>
 )
+
+HomePage.propTypes = {
+  match: PropTypes.shape({
+    isExact: PropTypes.bool,
+    params: PropTypes.object,
+    path: PropTypes.string,
+    url: PropTypes.string
+  }).isRequired
+}
 
 export default HomePage

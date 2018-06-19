@@ -5,7 +5,7 @@ import { __PROD__ } from '../globals'
 
 export default [
   {
-    test: /\.(woff|woff2)$/,
+    test: /\.(woff|woff2|ttf|svg)$/,
     include: SRC,
     use: [
       {
