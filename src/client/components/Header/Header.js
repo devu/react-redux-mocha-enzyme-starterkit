@@ -14,8 +14,12 @@ const Header = () => (
         Dashboard
       </NavLink>
       {' | '}
-      <NavLink to="/about" activeStyle={activeStyle}>
-        About
+      <NavLink to="/redux" activeStyle={activeStyle}>
+        Redux
+      </NavLink>
+      {' | '}
+      <NavLink to="/demo" activeStyle={activeStyle}>
+        Demo
       </NavLink>
     </div>
   </Fragment>

@@ -2,10 +2,11 @@ import React, { Fragment } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { hot } from 'react-hot-loader'
 
-import Dashboard from '../containers/Dashboard'
-import Header from './Header'
-import HomePage from './HomePage'
-import NotFoundPage from './NotFoundPage'
+import Header from '../Header'
+import HomePage from '../HomePage'
+import DashboardPage from '../DashboardPage'
+import ReduxPage from '../ReduxPage'
+import NotFoundPage from '../NotFoundPage'
 
 const App = () => (
   <Fragment>
@@ -13,7 +14,8 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route path="/home" component={HomePage} />
-      <Route path="/dashboard" component={Dashboard} />
+      <Route path="/dashboard" component={DashboardPage} />
+      <Route path="/redux" component={ReduxPage} />
       <Route path="*" component={NotFoundPage} />
     </Switch>
   </Fragment>

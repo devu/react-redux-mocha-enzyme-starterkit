@@ -2,7 +2,7 @@
 import { createStore, compose, applyMiddleware } from 'redux'
 
 import createHistory from 'history/createBrowserHistory'
-// 'routerMiddleware': the new way of storing route changes with redux middleware since rrV4.
+// the new way of storing route changes with redux middleware since rrV4.
 import { routerMiddleware } from 'react-router-redux'
 import rootReducer from '../reducers'
 

@@ -5,7 +5,7 @@ const activeStyle = { color: 'red' }
 
 const Main = () => (
   <div>
-    Main Home Page content
+    <h4>Main Home Page content</h4>
     <div className="home-main">
       <NavLink exact to="/home/buttons" activeStyle={activeStyle}>
         Buttons
