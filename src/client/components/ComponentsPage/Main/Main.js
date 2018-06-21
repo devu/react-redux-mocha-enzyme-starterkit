@@ -5,29 +5,32 @@ const activeStyle = { color: 'red' }
 
 const Main = () => (
   <div>
-    <h4>Main Home Page content</h4>
+    <h4>Pearson UI Components showcase</h4>
+    <p>
+      <a href="https://uxframework.pearson.com/ui-kit"> Reference: https://uxframework.pearson.com/ui-kit</a>
+    </p>
     <div className="home-main">
-      <NavLink exact to="/home/buttons" activeStyle={activeStyle}>
+      <NavLink exact to="/components/buttons" activeStyle={activeStyle}>
         Buttons
       </NavLink>
       {' | '}
-      <NavLink to="/home/icons" activeStyle={activeStyle}>
+      <NavLink to="/components/icons" activeStyle={activeStyle}>
         Icons
       </NavLink>
       {' | '}
-      <NavLink to="/home/selectors" activeStyle={activeStyle}>
+      <NavLink to="/components/selectors" activeStyle={activeStyle}>
         Selectors
       </NavLink>
       {' | '}
-      <NavLink to="/home/inputs" activeStyle={activeStyle}>
+      <NavLink to="/components/inputs" activeStyle={activeStyle}>
         Text Inputs
       </NavLink>
       {' | '}
-      <NavLink to="/home/grids" activeStyle={activeStyle}>
+      <NavLink to="/components/grids" activeStyle={activeStyle}>
         Grids
       </NavLink>
       {' | '}
-      <NavLink to="/home/tables" activeStyle={activeStyle}>
+      <NavLink to="/components/tables" activeStyle={activeStyle}>
         Tables
       </NavLink>
     </div>

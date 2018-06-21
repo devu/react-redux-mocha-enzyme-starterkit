@@ -7,6 +7,7 @@ import HomePage from '../HomePage'
 import ComponentsPage from '../ComponentsPage'
 import DashboardPage from '../DashboardPage'
 import ReduxPage from '../ReduxPage'
+import DemoPage from '../DemoPage'
 import NotFoundPage from '../NotFoundPage'
 
 const App = () => (
@@ -14,9 +15,11 @@ const App = () => (
     <Header />
     <Switch>
       <Route exact path="/" component={HomePage} />
+      <Route path="/home" component={HomePage} />
       <Route path="/components" component={ComponentsPage} />
       <Route path="/dashboard" component={DashboardPage} />
       <Route path="/redux" component={ReduxPage} />
+      <Route path="/demo" component={DemoPage} />
       <Route path="*" component={NotFoundPage} />
     </Switch>
   </Fragment>

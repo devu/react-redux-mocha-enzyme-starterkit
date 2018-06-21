@@ -1,10 +1,7 @@
 import * as Actions from './'
+import getData from '../api/data'
 
-const dummyData = [{ id: 1, name: 'post1' }, { id: 3, name: 'post2' }]
-
-export function fetchData() {
-  return {
-    type: Actions.FETCH_POSTS,
-    payload: dummyData
-  }
-}
+export const fetchData = async () => ({
+  type: Actions.FETCH_POSTS,
+  payload: await getData()
+})

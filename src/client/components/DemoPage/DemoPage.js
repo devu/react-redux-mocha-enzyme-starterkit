@@ -3,16 +3,14 @@ import PropTypes from 'prop-types'
 import { Route } from 'react-router-dom'
 
 import Main from './Main'
-import DataContainerClass from './DataContainerClass'
-import DataContainerFunc from './DataContainerFunc'
-import RawDataContainer from './RawDataContainer'
+import DemoOne from './DemoOne'
+import DemoTwo from './DemoTwo'
 
 const ReduxPage = ({ match }) => (
-  <div className="redux-page">
+  <div className="demo-page">
     <Route path={match.path} component={Main} />
-    <Route path={`${match.path}/class`} component={DataContainerClass} />
-    <Route path={`${match.path}/func`} component={DataContainerFunc} />
-    <Route path={`${match.path}/raw`} component={RawDataContainer} />
+    <Route path={`${match.path}/1`} component={DemoOne} />
+    <Route path={`${match.path}/2`} component={DemoTwo} />
   </div>
 )
 

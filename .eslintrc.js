@@ -52,6 +52,7 @@ module.exports = {
     'comma-dangle': 0,
     'func-names': [2, 'as-needed'],
     'import/prefer-default-export': 0,
+    'arrow-parens': 0,
     semi: [2, 'never'],
     'no-unexpected-multiline': 2,
   },

@@ -14,6 +14,10 @@ const Main = () => (
       <NavLink exact to="/redux/func" activeStyle={activeStyle}>
         DataContainer Functional
       </NavLink>
+      {' | '}
+      <NavLink exact to="/redux/raw" activeStyle={activeStyle}>
+        DataContainer no redux
+      </NavLink>
     </div>
   </div>
 )

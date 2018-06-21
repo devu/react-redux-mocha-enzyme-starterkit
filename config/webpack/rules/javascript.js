@@ -3,28 +3,18 @@ import { __PROD__ } from '../globals'
 
 const rules = [
   {
-    test: /\.jsx?$/,
+    test: /\.js[x]?$/,
     include: SRC,
-    use: [
-      {
-        loader: 'babel-loader',
-        options: {
-          babelrc: false,
-          plugins: ['react-hot-loader/babel'],
-          presets: [
-            ['env', { es2015: { modules: false } }],
-            'stage-3',
-            'react',
-          ],
-        },
-      },
-    ],
+    exclude: /(node_modules|bower_components)/,
+    use: {
+      loader: 'babel-loader'
+    }
   },
 ]
 
 if (__PROD__) {
   const eslintRule = {
-    test: /\.jsx?$/,
+    test: /\.js[x]?$/,
     include: SRC,
     enforce: 'pre',
     use: [

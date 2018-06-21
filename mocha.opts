@@ -1,3 +1,4 @@
 --require ./tools/testSetup.js
+--require babel-polyfill
 --reporter progress
 --ui bdd
