@@ -30,18 +30,7 @@ compiler.run((err, stats) => {
     if (err.details) {
       console.log(chalk.red(err.details))
     }
-
-    return
-  }
-
-  if (stats.hasErrors()) {
-    console.log(chalk.red.bold(
-      `
-:(  ERRORS DURING COMPILATION!
-=>  Fix them and try again!`
-    ))
-
-    return
+    process.exit(1)
   }
 
   console.log(stats.toString({
@@ -51,6 +40,16 @@ compiler.run((err, stats) => {
     errors: true,
     colors: true,
   }))
+  if (stats.hasErrors()) {
+    console.log(chalk.red.bold(
+      `
+:(  ERRORS DURING COMPILATION!
+=>  Fix them and try again!`
+    ))
+
+    process.exit(1)
+  }
+
 
   console.log(chalk.green(
     `

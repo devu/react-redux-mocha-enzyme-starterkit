@@ -20,29 +20,6 @@ export default [
       },
     ],
   },
-  /*
-  {
-    test: /\.svg$/,
-    include: SRC,
-    use: [
-      {
-        loader: 'svg-sprite-loader',
-        options: {
-          extract: true,
-          spriteFilename: __PROD__ ? 'icons.[hash].svg' : 'icons.svg',
-        },
-      },
-      {
-        loader: 'svgo-loader',
-        options: {
-          plugins: [
-            // TODO
-          ],
-        },
-      },
-    ],
-  },
-  */
   {
     test: /\.(mp4|m4a|webm|ogv|oga|ogg|mp3|wav)$/,
     include: SRC,

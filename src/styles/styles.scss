@@ -1,0 +1,43 @@
+@import './variables';
+@import './fonts';
+
+body {
+  background: white;
+  height: 100%;
+  width: 100%;
+  font-family: $application-font-regular;
+  font-size: 16px;
+  color: $nero;
+  padding: 0;
+  margin: 0;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-weight: 300;
+
+  .app-container {
+    background-color: $whiteSmoke;
+  }
+}
+
+.bp-container {
+  padding-left: 42px;
+  padding-right: 42px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+}
+
+.asset-plan-request-dialog {
+  .bp-dialog-button {
+    background: $cerulean;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.material-icons {
+  overflow: visible !important;
+}

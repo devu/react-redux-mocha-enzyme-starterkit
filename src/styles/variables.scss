@@ -1,0 +1,216 @@
+/* Variables */
+$vin-blue: #5bb7db;
+$vin-green: #60b044;
+$vin-red: #f00;
+$vin-def: #4d4d4d;
+
+$white: #fff;
+$black: #000;
+$green: #38b24f;
+$red: #f03838;
+$errorColor: #e12013;
+$darkRed: #b81d1d;
+$orange: #ff9738;
+$grid-visual: 'false';
+
+$green-color: #088708;
+$red-color: #e81313;
+$palered-color: rgba(249, 229, 228, 0.5);
+$pending-color: transparent;
+$orange-color: #f1831e;
+$palegreen-color: palegreen;
+$palegrey-color: rgba(0, 0, 0, 0.3);
+
+// colours
+$wizard-background-color: #f1faff;
+
+$select-hover-color: #ddd;
+$application-border-color: #c9c9cc;
+
+// media query
+$mobile-mq: (
+  max-width: 960px
+);
+$desktop-mq: (
+  min-width: 1800px
+);
+$tablet-mq: (
+  min-width: 737px
+);
+
+$assetPlanArrowPostion: 48%;
+
+// asset pairing
+$spaceShuttle: #47413b;
+$sirocco: #66716c;
+$nevada: #6a7070;
+$silverGrey: #777;
+$grey: #808080;
+$mintTulip: #c6f3e1;
+$bubbles: #f2f9f4;
+$nero: #252525;
+$silver: #bbb;
+$orient: #005a72; //view tab labels
+$blueLagoon: #005a71; // pearson default
+$cerulean: #007fa3; // default state of blue button
+$easternBlue: #1489aa; // hover state of blue button
+$funGreen: #008638; //default state of green button
+$jewel: #148f47; //hover state of green button
+$darkSpringGreen: #0e7145; //selection marhing ants
+$watercourse: #017244; //view tabs Paired
+$red: #e00; // view tab unpaired
+$salem: #129743; //active radio/checkboxes
+$eclipse: #3b3b3b; // view tabs Excluded
+$zambezi: #595959; // default state of Exclude
+$mystic: #d4dbd6; //folder header bg on bulk selection
+//asset pairing after redesign
+$whiteSmoke: #f3f3f3;
+$gainsboro: #e0e0e0;
+$veryLightGrey: #ccc;
+$dimGrey: #666; // hover state of Exclude
+$nobel: #969696; //
+$silverChalice: #9d9d9d; // inactive radio/checkbox
+
+//asset ingestion styling
+$error: #d40019;
+$errorMain: #eec3c8;
+$warning: #ffc200;
+$warningMain: #f7e5ab;
+$primary: #1792bd;
+$slateGrey: #6a7070;
+$kellyGreen: #008638;
+$alto: #d5d5d5;
+
+$title-large: 23.7px;
+$title-small: 11.8px;
+$button-bold: 12px;
+
+//asset plan request
+$wildSand: #f5f5f5;
+
+//sizes
+$h5-font-size: 23.69px;
+$h5-letter-spacing: 0;
+$h6-font-size: 19.74px;
+$h6-letter-spacing: 0.25px;
+$body1-font-size: 15.8px;
+$body1-letter-spacing: 0.5px;
+$body2-font-size: 13.82px;
+$body2-letter-spacing: 0.25px;
+$subtitle1-font-size: 15.8px;
+$subtitle1-letter-spacing: 0.15px;
+$subtitle2-font-size: 13.82px;
+$subtitle2-letter-spacing: 0.1px;
+$button-font-size: 13.82px;
+$button-letter-spacing: 1.2px;
+$title-font-size: 12.8px;
+$title-letter-spacing: 1.2px;
+$caption-font-size: 11.85px;
+$caption-letter-spacing: 0.4px;
+$caption-small-font-size: 10px;
+$caption-small-letter-spacing: 0.4px;
+$overline-font-size: 11.85px;
+$overline-letter-spacing: 2px;
+$white: #fff;
+$black: #000;
+$green: #38b24f;
+$red: #f03838;
+$errorColor: #e12013;
+$darkRed: #b81d1d;
+$orange: #ff9738;
+$grid-visual: 'false';
+
+$green-color: #088708;
+$red-color: #e81313;
+$palered-color: rgba(249, 229, 228, 0.5);
+$pending-color: transparent;
+$orange-color: #f1831e;
+$palegreen-color: palegreen;
+$palegrey-color: rgba(0, 0, 0, 0.3);
+
+// colours
+$wizard-background-color: #f1faff;
+
+$select-hover-color: #ddd;
+$application-border-color: #c9c9cc;
+
+// media query
+$mobile-mq: (
+  max-width: 960px
+);
+$desktop-mq: (
+  min-width: 1800px
+);
+$tablet-mq: (
+  min-width: 737px
+);
+
+$assetPlanArrowPostion: 48%;
+
+// fonts
+
+$application-font-family: 'Open Sans', 'OpenSans', OpenSans, openSansRegular;
+$application-font-bold: 'Open Sans Bold', openSansBold;
+$application-font-semi-bold: 'Open Sans Semibold', openSansSemiBold;
+$application-font-regular: 'Open Sans Regular', openSansRegular;
+$font-family: 'Open Sans', OpenSans, 'OpenSans', openSansRegular;
+
+//sizes
+$h5-font-size: 23.69px;
+$h5-letter-spacing: 0;
+$h6-font-size: 19.74px;
+$h6-letter-spacing: 0.25px;
+$body1-font-size: 15.8px;
+$body1-letter-spacing: 0.5px;
+$body2-font-size: 13.82px;
+$body2-letter-spacing: 0.25px;
+$subtitle1-font-size: 15.8px;
+$subtitle1-letter-spacing: 0.15px;
+$subtitle2-font-size: 13.82px;
+$subtitle2-letter-spacing: 0.1px;
+$button-font-size: 13.82px;
+$button-letter-spacing: 1.2px;
+$title-font-size: 12.8px;
+$title-letter-spacing: 1.2px;
+$caption-font-size: 11.85px;
+$caption-letter-spacing: 0.4px;
+$caption-small-font-size: 10px;
+$caption-small-letter-spacing: 0.4px;
+$overline-font-size: 11.85px;
+$overline-letter-spacing: 2px;
+
+// asset pairing
+$spaceShuttle: #47413b;
+$sirocco: #66716c;
+$nevada: #6a7070;
+$silverGrey: #777;
+$grey: #808080;
+$mintTulip: #c6f3e1;
+$bubbles: #f2f9f4;
+$nero: #252525;
+$silver: #bbb;
+$orient: #005a72; //view tab labels
+$blueLagoon: #005a71; // pearson default
+$brightBlue: #047a9c;
+$cerulean: #007fa3; // default state of blue button
+$easternBlue: #1489aa; // hover state of blue button
+$funGreen: #008638; //default state of green button
+$jewel: #148f47; //hover state of green button
+$darkSpringGreen: #0e7145; //selection marhing ants
+$watercourse: #017244; //view tabs Paired
+$red: #e00; // view tab unpaired
+$salem: #129743; //active radio/checkboxes
+$eclipse: #3b3b3b; // view tabs Excluded
+$zambezi: #595959; // default state of Exclude
+$mystic: #d4dbd6; //folder header bg on bulk selection
+//asset pairing after redesign
+$whiteSmoke: #f3f3f3;
+$gainsboro: #e0e0e0;
+$veryLightGrey: #ccc;
+$dimGrey: #666; // hover state of Exclude
+$nobel: #969696; //
+$silverChalice: #9d9d9d; // inactive radio/checkbox
+
+$title-large: 23.7px;
+$title-small: 11.8px;
+$button-bold: 12px;

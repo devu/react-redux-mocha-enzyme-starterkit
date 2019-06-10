@@ -1,4 +1,10 @@
 
+const chai = require('chai')
+const sinonChai = require('sinon-chai')
+
+chai.should()
+chai.use(sinonChai)
+
 require('babel-register')()
 require('raf').polyfill()
 
@@ -30,10 +36,17 @@ function copyProps(src, target) {
   Object.defineProperties(target, props)
 }
 
+global.TestUtils = require('react-dom/test-utils')
+
 global.window = window
 global.document = window.document
 global.navigator = {
   userAgent: 'node.js',
 }
+global.expect = chai.expect
+
+chai.should()
+chai.use(sinonChai)
+
 
 copyProps(window, global)

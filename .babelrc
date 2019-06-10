@@ -1,9 +1,30 @@
 {
   "presets": [
-      "react",
-      "env"
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "safari >= 7"
+          ],
+          "node": "current"
+        }
+      }
+    ],
+    "es2015",
+    "react",
+    "stage-2"
   ],
   "plugins": [
-      "transform-class-properties"
-  ]
+    "transform-class-properties",
+    "rewire"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "rewire"
+      ]
+    }
+  }
 }

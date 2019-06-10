@@ -5,18 +5,18 @@ import { __PROD__ } from '../globals'
 
 export default [
   {
-    test: /(\.css|\.scss|\.sass)$/,
+    test: /\.(scss)$/,
     include: SRC,
     use: [
       __PROD__ ? MiniCssExtractPlugin.loader : 'style-loader',
       {
         loader: 'css-loader',
         options: {
-          modules: true,
-          localIdentName: '[path][local]',
-          importLoaders: 1,
-        },
-      }, {
+          sourceMap: true
+          // includePaths: [NODE_MODULES]
+        }
+      },
+      {
         loader: 'postcss-loader',
         options: {
           plugins: () => [
@@ -24,13 +24,15 @@ export default [
           ],
           sourceMap: true
         }
-      }, {
+      },
+      {
         loader: 'sass-loader',
         options: {
           sourceMap: true
+          // includePaths: [NODE_MODULES]
         }
       }
-    ],
+    ]
   },
 
   {
@@ -38,7 +40,14 @@ export default [
     include: NODE_MODULES,
     use: [
       __PROD__ ? MiniCssExtractPlugin.loader : 'style-loader',
-      'css-loader',
-    ],
-  },
+      {
+        loader: 'css-loader',
+        options: {
+          importLoaders: 1,
+          sourceMap: true
+        }
+      },
+      'postcss-loader'
+    ]
+  }
 ]

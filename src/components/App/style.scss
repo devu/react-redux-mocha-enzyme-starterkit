@@ -1,0 +1,129 @@
+@import '../../styles/fonts';
+@import '../../styles/variables';
+
+.app {
+  background-color: white;
+
+  .placeholder-message {
+    padding-top: 20px;
+    margin: auto;
+    width: 200px;
+    text-align: center;
+  }
+}
+
+.application-modal {
+  padding: 0 24px;
+  font-family: $font-family;
+
+  .bp-modal-title {
+    color: $cerulean;
+    display: flex;
+
+    @include font('title');
+  }
+
+  .bp-modal-close-icon {
+    margin-left: auto;
+    padding: 10px;
+  }
+
+  .bp-modal-content {
+    padding: 0 24px;
+
+    @include font('body1');
+  }
+
+  .bp-dialog-paragraph {
+    margin-bottom: 10px;
+
+    .tick {
+      display: inline-block;
+      position: relative;
+      top: 5px;
+      padding-right: 8px;
+    }
+  }
+
+  .bp-dialog-bold {
+    @include font('subtitle2Bold');
+  }
+
+  .bp-dialog-list {
+    max-height: 300px;
+
+    .bp-dialog-list-item {
+      display: grid;
+      grid: 20px 60px 20px / 100px 20px 200px;
+
+      .list-item-img {
+        width: 100px;
+        height: 100px;
+        background-color: grey;
+      }
+
+      .list-item-title {
+        grid-column: 3;
+        grid-row: 1;
+
+        @include font('body1');
+      }
+
+      .list-item-description {
+        grid-column: 3;
+        grid-row: 2;
+      }
+
+      .list-item-link {
+        grid-column: 3;
+        grid-row: 3;
+      }
+    }
+  }
+
+  .application-modal-action {
+    justify-content: center;
+
+    .bp-modal-ignore-button {
+      background-color: $cerulean;
+      margin: 10px;
+
+      @include font('button');
+    }
+  }
+
+  .application-modal-actions {
+    display: grid;
+    grid: 50px / auto 124px 124px;
+    grid-gap: 8px;
+
+    .bp-modal-cancel-button {
+      grid-column: 2;
+      background-color: white;
+      color: $black;
+      margin: 0 15px 15px 0;
+
+      @include font('button');
+    }
+
+    .bp-modal-ok-button {
+      grid-column: 3;
+      background-color: $cerulean;
+      margin: 0 15px 15px 0;
+
+      @include font('button');
+    }
+
+    .bp-modal-checkbox {
+      grid-column: 1;
+      margin: 0 15px 15px 0;
+      color: $dimGrey;
+
+      @include font('caption');
+
+      .checkbox.active {
+        color: $salem;
+      }
+    }
+  }
+}

@@ -6,7 +6,6 @@ import SpriteLoaderPlugin from 'svg-sprite-loader/plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ImageminPlugin from 'imagemin-webpack-plugin'
 import CompressionPlugin from 'compression-webpack-plugin'
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import StyleLintPlugin from 'stylelint-webpack-plugin'
 
 import { DIST, SRC } from './paths'
@@ -25,7 +24,7 @@ export default {
   output: {
     filename: '[name].[chunkhash].js',
     path: DIST,
-    publicPath: '/',
+    publicPath: '',
   },
 
   module: {
@@ -84,9 +83,6 @@ export default {
       svgo: null,
     }),
     new CompressionPlugin(),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }),
     new StyleLintPlugin({
       configFile: '.stylelintrc.js',
       files: ['**/*.css'],
@@ -97,6 +93,6 @@ export default {
   target: 'web',
 
   performance: {
-    hints: 'warning',
+    hints: false
   },
 }

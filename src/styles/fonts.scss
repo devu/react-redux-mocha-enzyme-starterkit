@@ -1,0 +1,113 @@
+// fonts
+$application-font-family: 'Open Sans', 'OpenSans', OpenSans, openSansRegular;
+$application-font-bold: 'Open Sans Bold', openSansBold;
+$application-font-semi-bold: 'Open Sans Semibold', openSansSemiBold;
+$application-font-regular: 'Open Sans Regular', openSansRegular;
+$font-family: 'Open Sans', sans-serif;
+$roboto-font: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+//sizes
+$h5-font-size: 23.69px;
+$h5-letter-spacing: 0;
+$h6-font-size: 19.74px;
+$h6-letter-spacing: 0.25px;
+$form-title-font-size: 19.74px;
+$form-title-letter-spacing: 0.25px;
+$body1-font-size: 15.8px;
+$body1-letter-spacing: 0.5px;
+$body2-font-size: 13.82px;
+$body2-letter-spacing: 0.25px;
+$subtitle1-font-size: 15.8px;
+$subtitle1-letter-spacing: 0.15px;
+$subtitle2-font-size: 13.82px;
+$subtitle2-letter-spacing: 0.1px;
+$button-font-size: 13.82px;
+$button-letter-spacing: 1.2px;
+$title2-font-size: 25px;
+$title2-letter-spacing: -0.78px;
+$caption-font-size: 11.85px;
+$caption-letter-spacing: 0.4px;
+$caption-small-font-size: 10px;
+$caption-small-letter-spacing: 0.4px;
+$overline-font-size: 11.85px;
+$overline-letter-spacing: 2px;
+$form-label-font-size: 15.8px;
+$form-label-letter-spacing: 0.5px;
+
+@mixin font($name: 'title') {
+  @if $name== 'header' {
+    font-size: $h5-font-size;
+    letter-spacing: $h5-letter-spacing;
+  }
+
+  @if $name== 'body1' {
+    font-size: $body1-font-size;
+    letter-spacing: $body1-letter-spacing;
+  }
+
+  @if $name== 'body2' {
+    font-size: $body2-font-size;
+    letter-spacing: $body2-letter-spacing;
+  }
+
+  @if $name== 'title' {
+    font-size: $h6-font-size;
+    letter-spacing: $h6-letter-spacing;
+  }
+
+  @if $name== 'title2' {
+    font-size: $title2-font-size;
+    letter-spacing: $title2-letter-spacing;
+  }
+
+  @if $name== 'form-title' {
+    font-size: $form-title-font-size;
+    letter-spacing: $form-title-letter-spacing;
+    font-family: $font-family;
+    font-weight: 400;
+  }
+
+  @if $name== 'subtitle1' {
+    font-size: $subtitle1-font-size;
+    letter-spacing: $subtitle1-letter-spacing;
+  }
+
+  @if $name== 'subtitle2' {
+    font-size: $subtitle2-font-size;
+    letter-spacing: $subtitle2-letter-spacing;
+  }
+
+  @if $name== 'subtitle2Bold' {
+    font-size: $subtitle2-font-size;
+    letter-spacing: $subtitle2-letter-spacing;
+    font-weight: bold;
+  }
+
+  @if $name== 'button' {
+    font-size: $button-font-size;
+    letter-spacing: $button-letter-spacing;
+  }
+
+  @if $name== 'caption' {
+    font-size: $caption-font-size;
+    letter-spacing: $caption-letter-spacing;
+  }
+
+  @if $name== 'caption-small' {
+    font-size: $caption-small-font-size;
+    letter-spacing: $caption-small-letter-spacing;
+    font-weight: bold;
+  }
+
+  @if $name== 'overline' {
+    font-size: $overline-font-size;
+    letter-spacing: $overline-letter-spacing;
+  }
+
+  @if $name == 'form-label' {
+    font-size: $form-label-font-size;
+    letter-spacing: $form-label-letter-spacing;
+    font-family: $font-family;
+    font-weight: 400;
+  }
+}

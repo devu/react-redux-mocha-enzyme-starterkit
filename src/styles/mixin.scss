@@ -1,0 +1,252 @@
+@import './variables';
+
+@mixin label($fontSize, $fontWeight, $fontFamily) {
+  font-style: normal;
+  font-stretch: normal;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  font-family: $fontFamily;
+}
+
+@mixin label-plain($fontSize) {
+  @include label($fontSize, normal, $application-font-regular);
+}
+
+@mixin label-semi-bold($fontSize) {
+  @include label($fontSize, bold, $application-font-semi-bold);
+}
+
+@mixin label-bold($fontSize) {
+  @include label($fontSize, bold, openSansBold);
+}
+
+@mixin defaultPlaceholder {
+  // height: 20px;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #596265;
+}
+
+// will style input placeholder
+@mixin placeholder() {
+  &:-moz-placeholder {
+    @include defaultPlaceholder();
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @include defaultPlaceholder();
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @include defaultPlaceholder();
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @include defaultPlaceholder();
+    @content;
+  }
+}
+
+@mixin text-box($width, $ph: 'false') {
+  width: $width;
+  height: 28px;
+  border-radius: 3px;
+  margin: 10px 5.87% 0 0;
+  font-style: normal;
+
+  @if $ph== 'false' {
+    border: solid 1px #c9c9cc;
+    margin-left: 5.87%;
+
+    @include placeholder();
+  }
+}
+
+@mixin mobile($mobile-break-point: $mobile-mq) {
+  @media #{$mobile-break-point} {
+    @content;
+  }
+}
+
+@mixin tablet($tablet-break-point: $tablet-mq) {
+  @media #{$tablet-break-point} {
+    @content;
+  }
+}
+
+@mixin desktop($desktop-break-point: $desktop-mq) {
+  @media #{$desktop-break-point} {
+    @content;
+  }
+}
+
+@mixin media($break-point: 1000) {
+  @media (min-width: #{$break-point}px) {
+    @content;
+  }
+}
+
+@mixin contentBoximportant() {
+  & div {
+    box-sizing: content-box !important; // need to remove
+  }
+}
+
+@mixin widescreen($width: 'true') {
+  @media (min-width: 1680px) {
+    @if $width== 'true' {
+      width: 60%;
+      @content;
+    }
+
+ @else {
+      @content;
+    }
+  }
+}
+
+@mixin textOverflow($clamp: 2) {
+  overflow: hidden;
+  -webkit-line-clamp: $clamp;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+
+@mixin ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+@mixin triangle($triangleColor: #007da7, $left: 25%, $background: #fff) {
+  position: relative;
+  border-top: 1px solid $triangleColor;
+  margin-top: 15px;
+
+  &::after,
+  &::before {
+    bottom: 100%;
+    left: $left;
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    width: 2px;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &::after {
+    border-color: rgba(0, 125, 167, 0);
+    border-bottom-color: $background;
+    border-width: 11px;
+    margin-left: -11px;
+  }
+
+  &::before {
+    border-color: rgba(0, 125, 167, 0);
+    border-bottom-color: $triangleColor;
+    border-width: 12px;
+    margin-left: -12px;
+  }
+}
+
+@mixin font($name: 'body1') {
+  @if $name== 'info' {
+    font-size: $h5-font-size;
+    letter-spacing: $h5-letter-spacing;
+  }
+
+  @if $name== 'body1' {
+    font-size: $body1-font-size;
+    letter-spacing: $body1-letter-spacing;
+  }
+
+  @if $name== 'body2' {
+    font-size: $body2-font-size;
+    letter-spacing: $body2-letter-spacing;
+  }
+
+  @if $name== 'title' {
+    font-size: $h6-font-size;
+    letter-spacing: $h6-letter-spacing;
+  }
+
+  @if $name== 'subtitle1' {
+    font-size: $subtitle1-font-size;
+    letter-spacing: $subtitle1-letter-spacing;
+  }
+
+  @if $name== 'subtitle2' {
+    font-size: $subtitle2-font-size;
+    letter-spacing: $subtitle2-letter-spacing;
+  }
+
+  @if $name== 'button' {
+    font-size: $button-font-size;
+    letter-spacing: $button-letter-spacing;
+  }
+
+  @if $name== 'title' {
+    font-size: $title-font-size;
+    letter-spacing: $title-letter-spacing;
+  }
+
+  @if $name== 'caption' {
+    font-size: $caption-font-size;
+    letter-spacing: $caption-letter-spacing;
+  }
+
+  @if $name== 'caption-small' {
+    font-size: $caption-small-font-size;
+    letter-spacing: $caption-small-letter-spacing;
+    font-weight: bold;
+  }
+
+  @if $name== 'overline' {
+    font-size: $overline-font-size;
+    letter-spacing: $overline-letter-spacing;
+  }
+}
+
+@mixin clearance($background: 'true') {
+  @if $background== 'true' {
+    &.green-clearence {
+      background-color: $green-color;
+      color: $green-color;
+    }
+
+    &.red-clearence {
+      background-color: $red-color;
+      color: $red-color;
+    }
+
+    &.orange-clearence {
+      background-color: $orange-color;
+      color: $orange-color;
+    }
+  }
+
+ @else {
+    &.green-clearence {
+      color: $green-color;
+    }
+
+    &.red-clearence {
+      color: $red-color;
+    }
+
+    &.orange-clearence {
+      color: $orange-color;
+    }
+  }
+}

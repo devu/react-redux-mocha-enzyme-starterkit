@@ -13,7 +13,6 @@ import webpackConfig from '../config/webpack/config.dev'
 const env = process.env.NODE_ENV
 const bs = browserSync.create()
 const compiler = webpack(webpackConfig)
-
 const devMiddlewareOptions = {
   publicPath: webpackConfig.output.publicPath,
   stats: {
@@ -35,13 +34,14 @@ bs.init({
     ],
   },
 
+  host: 'localhost',
+  open: 'external',
   port: 3000,
 
   ui: {
     port: 3001,
   },
 
-  open: false,
   reloadOnRestart: true,
   single: true,
 })

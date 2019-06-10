@@ -1,0 +1,26 @@
+# Define text file attributes.
+# - Treat them as text.
+# - Ensure no CRLF line-endings, neither on checkout nor on checkin.
+# - Detect whitespace errors.
+#   - Exposed by default in `git diff --color` on the CLI.
+#   - Validate with `git diff --check`.
+#   - Deny applying with `git apply --whitespace=error-all`.
+#   - Fix automatically with `git apply --whitespace=fix`.
+
+*.txt     text eol=lf whitespace=blank-at-eol,-blank-at-eof,-space-before-tab,tab-in-indent,tabwidth=2
+*.css     text eol=lf whitespace=blank-at-eol,-blank-at-eof,-space-before-tab,tab-in-indent,tabwidth=2
+*.html    text eol=lf whitespace=blank-at-eol,-blank-at-eof,-space-before-tab,tab-in-indent,tabwidth=2
+*.js      text eol=lf whitespace=blank-at-eol,-blank-at-eof,-space-before-tab,tab-in-indent,tabwidth=2
+*.json    text eol=lf whitespace=blank-at-eol,-blank-at-eof,-space-before-tab,tab-in-indent,tabwidth=2
+*.xml     text eol=lf whitespace=blank-at-eol,-blank-at-eof,-space-before-tab,tab-in-indent,tabwidth=2
+*.svg     text eol=lf whitespace=blank-at-eol,-blank-at-eof,-space-before-tab,tab-in-indent,tabwidth=2
+
+# Define binary file attributes.
+*.jpeg    -text diff
+*.jpg     -text diff
+*.png     -text diff
+core.autocrlf=true
+
+# Run the following commands against your repository
+# $ git config core.eol lf
+# $ git config core.autocrlf input
