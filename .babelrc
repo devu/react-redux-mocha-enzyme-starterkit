@@ -17,6 +17,12 @@
     "stage-2"
   ],
   "plugins": [
+    ["babel-plugin-styled-components",
+      {
+        "displayName": false,
+        "fileName": false
+      }
+    ],
     "transform-class-properties",
     "rewire"
   ],
