@@ -6,6 +6,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom'
 import InvalidRoute from './InvalidRoute'
 import Test from '../Test'
 import ReactDisplayList from '../ReactDisplayList'
+import DzonyComponent from '../DzonyComponent'
 
 export const AppRouteSelect = ({ uuid }) => {
   return (
@@ -18,6 +19,11 @@ export const AppRouteSelect = ({ uuid }) => {
             exact
             path="/react-display-list"
             component={ReactDisplayList}
+          />
+          <Route
+            exact
+            path="/dzony"
+            component={DzonyComponent}
           />
           <Route data-qa="invalid-route" component={InvalidRoute} />
         </Switch>
