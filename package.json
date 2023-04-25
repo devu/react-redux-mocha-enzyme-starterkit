@@ -73,7 +73,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "6.26.0",
     "braces": "^3.0.2",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.29.1",
     "chai": "4.1.2",
     "chai-enzyme": "1.0.0-beta.0",
     "chalk": "2.4.1",
